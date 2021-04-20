@@ -1,6 +1,7 @@
 import numpy as np
 import math
 import random
+import matplotlib.pyplot as plt
 
 class LogisticRegression():
     def __init__(self, LR=0.01, K=10000):
@@ -45,6 +46,8 @@ class LogisticRegression():
         
         self.W = W
         self.num_classes = num_classes
+        plt.plot(range(K), costArray)
+        plt.show()
         
         return (K, costArray)
     
